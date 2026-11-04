@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esplora il Mondo - Agenzia Viaggi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 0.5rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background-color: #ecf0f1;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #c0392b;
+        }
+        .container {
+            width: 85%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 2rem 0;
+        }
+        
+        /* Sezione Pacchetti */
+        .packages-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .package-card {
+            background: #ffffff;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            flex: 1;
+            min-width: 250px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .package-card.highlight {
+            border-color: #e74c3c;
+            transform: scale(1.03);
+        }
+        .price {
+            font-size: 1.8rem;
+            color: #27ae60;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        
+        /* Scaletta Viaggi */
+        .viaggi-list {
+            list-style: none;
+            padding: 0;
+        }
+        .viaggio-item {
+            background: #f9f9f9;
+            border-left: 4px solid #34495e;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Avventure nel Mondo</h1>
+        <p>Il tuo viaggio ideale inizia qui</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#pacchetti">Pacchetti</a>
+        <a href="#destinazioni">Destinazioni</a>
+        <a href="#contatti">Contatti</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <h2>Pronto a partire per la tua prossima avventura?</h2>
+        <p>Scopri le nostre opzioni di viaggio personalizzate per ogni budget.</p>
+        <!-- Cliccando qui l'utente va direttamente ai 3 pacchetti -->
+        <a href="#pacchetti" class="btn">Scopri di più</a>
+    </section>
+
+    <div class="container">
+        
+        <!-- Nuova Sezione Pacchetti e Prezzi -->
+        <section id="pacchetti">
+            <h2>I Nostri Pacchetti Viaggio</h2>
+            <p>Scegli la formula più adatta alle tue esigenze:</p>
+            
+            <div class="packages-grid">
+                
+                <div class="package-card">
+                    <h3>Pacchetto Explorer</h3>
+                    <p>Ideale per chi ama l'avventura e desidera viaggiare risparmiando.</p>
+                    <div class="price">790 €</div>
+                    <ul>
+                        <li>Volo A/R incluso</li>
+                        <li>Hotel 3 stelle con colazione</li>
+                        <li>Guida digitale della città</li>
+                    </ul>
+                </div>
+
+                <div class="package-card highlight">
+                    <h3>Pacchetto Comfort</h3>
+                    <p>La scelta migliore tra relax, comodità ed esperienze guidate.</p>
+                    <div class="price">1.450 €</div>
+                    <ul>
+                        <li>Volo A/R con bagaglio in stiva</li>
+                        <li>Hotel 4 stelle centrale</li>
+                        <li>2 Tour guidati inclusi</li>
+                        <li>Assicurazione viaggio</li>
+                    </ul>
+                </div>
+
+                <div class="package-card">
+                    <h3>Pacchetto Luxury</h3>
+                    <p>Un'esperienza a 5 stelle senza rinunce e con massimo comfort.</p>
+                    <div class="price">2.900 €</div>
+                    <ul>
+                        <li>Volo in Business Class</li>
+                        <li>Resort / Hotel 5 stelle Luxe</li>
+                        <li>Trasferimenti privati in limousine</li>
+                        <li>Tour privati & cene stellate</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ddd;">
+
+        <!-- Scaletta Destinazioni -->
+        <section id="destinazioni">
+            <h2>Destinazioni Principali</h2>
+            <ul class="viaggi-list">
+                <li class="viaggio-item">
+                    <h3>1. New York (Stati Uniti)</h3>
+                    <p>Vivi l'energia della Grande Mela, tra Times Square, Central Park e la Statua della Libertà.</p>
+                </li>
+                <li class="viaggio-item">
+                    <h3>2. Tokyo (Giappone)</h3>
+                    <p>Un perfetto connubio tra tradizione millenaria e futuro ipertecnologico.</p>
+                </li>
+                <li class="viaggio-item">
+                    <h3>3. Parigi (Francia)</h3>
+                    <p>La città dell'amore e dell'arte, tra la Torre Eiffel e le passeggiate lungo la Senna.</p>
+                </li>
+                <li class="viaggio-item">
+                    <h3>4. Sydney (Australia)</h3>
+                    <p>Spiagge mozzafiato, la famosa Opera House e una natura incontaminata.</p>
+                </li>
+                <li class="viaggio-item">
+                    <h3>5. Roma (Italia)</h3>
+                    <p>Un viaggio nella storia antica tra il Colosseo, la Fontana di Trevi e la grande cucina italiana.</p>
+                </li>
+            </ul>
+        </section>
+
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ddd;">
+
+        <!-- Contatti -->
+        <section id="contatti">
+            <h2>Contattaci</h2>
+            <p>Hai domande sui pacchetti o vuoi un preventivo su misura? Scrivici!</p>
+            <ul>
+                <li><strong>Email:</strong> info@avventurenelmondo.com</li>
+                <li><strong>Telefono:</strong> +39 06 12345678</li>
+                <li><strong>Indirizzo:</strong> Via dei Viaggiatori 42, Roma</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Avventure nel Mondo. Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+</html>
